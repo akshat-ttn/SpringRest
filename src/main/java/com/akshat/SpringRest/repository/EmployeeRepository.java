@@ -24,8 +24,10 @@ public class EmployeeRepository {
 
     public ResponseEntity<List<Employee>> findAll() {
         if(employeeList.isEmpty())
+        {
             return new ResponseEntity<>(employeeList,HttpStatus.NO_CONTENT);
-        return  new ResponseEntity<>(employeeList,HttpStatus.OK);
+        }
+        return new ResponseEntity<>(employeeList,HttpStatus.OK);
     }
 
     public ResponseEntity<Employee> findEmployeeById(Integer id) {

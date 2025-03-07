@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -15,7 +17,7 @@ public class EmployeeService {
     private EmployeeRepository repository;
 
     public ResponseEntity<List<Employee>> getAllEmployees() {
-        return repository.findAll();
+        return  repository.findAll();
     }
 
     public ResponseEntity<Employee> getEmployeeById(Integer id) {
